@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brotherdev.sister.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/rounded"
+            android:src="@drawable/profile"
+            android:padding="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/txt_welocme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="8pt"
+            android:text="Selamat Datang" />
+
+        <TextView
+            android:id="@+id/txt_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_welocme"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="8pt"
+            android:textStyle="bold"
+            android:text="Tetsuya Kuroko" />
+
+        <TextView
+            android:id="@+id/txt_sekolah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_nama"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="7pt"
+            android:text="Seirin High School Tokyo" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeLayout"
+            android:stretchColumns="0,1,2"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btn_materi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_folder_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Materi"
+                    android:theme="@style/MenuButton"/>
+
+                <Button
+                    android:id="@+id/btn_tugas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_assignment_turned_in_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Tugas"
+                    android:theme="@style/MenuButton"/>
+
+                <Button
+                    android:id="@+id/btn_absensi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_people_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Absensi"
+                    android:theme="@style/MenuButton"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_nilai"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_grade_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Nilai"
+                    android:theme="@style/MenuButton"/>
+
+                <Button
+                    android:id="@+id/btn_agenda"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_event_note_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Agenda"
+                    android:theme="@style/MenuButton"/>
+
+                <Button
+                    android:id="@+id/btn_jadwal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_access_time_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Jadwal"
+                    android:theme="@style/MenuButton"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+                    android:id="@+id/btn_profil"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_account_circle_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Profil"
+                    android:theme="@style/MenuButton"/>
+
+                <Button
+                    android:id="@+id/btn_bantuan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_help_outline_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Bantuan"
+                    android:theme="@style/MenuButton"/>
+
+                <Button
+                    android:id="@+id/btn_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/ic_exit_to_app_black_24dp"
+                    android:drawableTint="@color/colorPrimary"
+                    android:textColor="?colorPrimary"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="15dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:drawablePadding="5dp"
+                    android:text="Logout"
+                    android:theme="@style/MenuButton"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+    </ScrollView>
+</RelativeLayout>
