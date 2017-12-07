@@ -7,10 +7,12 @@ package com.brotherdev.sister.model;
 public class Nilai {
     private String nama_mapel;
     private String nilai;
+    private String guru;
 
-    public Nilai(String nama_mapel, String nilai) {
+    public Nilai(String nama_mapel, String nilai, String guru) {
         this.nama_mapel = nama_mapel;
         this.nilai = nilai;
+        this.guru = guru;
     }
 
     public String getNama_mapel() {
@@ -27,5 +29,13 @@ public class Nilai {
 
     public void setNilai(String nilai) {
         this.nilai = nilai;
+    }
+
+    public String getGuru() {
+        return guru;
+    }
+
+    public void setGuru(String guru) {
+        this.guru = guru;
     }
 }

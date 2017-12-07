@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brotherdev.sister.TugasDetailActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_tugas_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_tugas_detail"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/due"
+            android:drawableStart="@drawable/ic_date_range_black_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:text="Due: Senin, 1 Januari 2018" />
+
+        <EditText
+            android:id="@+id/note"
+            android:drawableStart="@drawable/ic_edit_black_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:clickable="false"
+            android:focusable="false"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/due"
+            android:textSize="16sp"
+            android:textColor="@android:color/darker_gray"
+            android:text="Kerjakan soal no 1-20 lengkap dengan langkah-langkah pengerjaannya" />
+
+        <EditText
+            android:id="@+id/attach"
+            android:drawableStart="@drawable/ic_attach_file_black_24dp"
+            android:drawableTint="@color/colorPrimary"
+            android:drawablePadding="10dp"
+            android:focusable="false"
+            android:backgroundTint="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/note"
+            android:textSize="16sp"
+            android:text="Upload file..." />
+    </RelativeLayout>
+</RelativeLayout>

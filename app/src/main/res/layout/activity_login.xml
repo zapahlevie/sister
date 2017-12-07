@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/login_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -7,13 +8,14 @@
     android:padding="20dp">
 
     <LinearLayout
+        android:id="@+id/layout_linear"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/form_title"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
@@ -23,70 +25,60 @@
             android:textSize="25sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/email"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/email_layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@android:color/transparent"
-            android:gravity="center_vertical"
-            android:drawableLeft="@drawable/ic_mail_outline_black_24dp"
-            android:drawablePadding="8dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="16sp"/>
+            android:hint=" "
+            app:passwordToggleEnabled="true">
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:background="@android:color/black" />
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_mail_outline_black_24dp"
+                android:drawablePadding="8dp"
+                android:hint="Email"
+                app:hintEnabled="false"
+                android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
 
-        <EditText
-            android:id="@+id/password"
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/password_layout"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:background="@android:color/transparent"
-            android:drawableLeft="@drawable/ic_lock_outline_black_24dp"
-            android:drawablePadding="8dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@android:color/black"
-            android:textColorHint="@android:color/black"
-            android:textSize="16sp"/>
+            android:hint=" "
+            app:passwordToggleEnabled="true">
 
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1px"
-            android:background="@android:color/black" />
-
-        <!-- Login Button -->
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                app:hintEnabled="false"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:background="@drawable/btn_bg_rounded"
+            android:background="@color/colorPrimary"
             android:text="LOGIN"
             android:padding="3dp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
             android:textSize="17sp"/>
 
-        <!-- Link to Login Screen -->
-
         <Button
             android:id="@+id/btnLinkToRegisterScreen"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:layout_below="@id/layout_linear"
             android:background="@null"
             android:text="Belum punya akun? Daftar sekarang."
             android:textAllCaps="false"
